@@ -2,6 +2,8 @@
 
   $(function(){
 
+    $("#dialog").hide();
+
     //variable to hold current student we have selected for edit
     let currentStudent;
 
@@ -65,14 +67,26 @@
 
       //enable input fields after we fill out the form
       $("#studentAddForm :input").prop("disabled", false);
+
+      //opens dialog with form
+      $("#dialog").dialog({
+        width: 800,
+        title: "Edit Student",
+        buttons: {
+          Cancel: function() {
+            $( this ).dialog( "close" );
+          },
+          Submit: function() {
+            updateStudent();
+            $( this ).dialog( "close" );
+          }
+      }
+      });
     })
 
     //when the submit button on the form is clicked lets prevent the default behavior
     //we want to stop the form from submitting and reloading the page
-    $("#submitStudentButton").click(function(e){
-
-      //prevents default behavior of form submitting
-      e.preventDefault()
+    function updateStudent(){
 
       $.ajax({
         url: "http://localhost:1337/student/" + currentStudent,
@@ -91,7 +105,8 @@
 
         }
       })
-    })
+
+    }
 
   })
 
