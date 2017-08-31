@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>student api front end</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+  </head>
+  <body>
+
+    <table class="table table-striped">
+        <thead>
+          <th>FIRST NAME</th>
+          <th>LAST NAME</th>
+          <th>ADMIN</th>
+        </thead>
+        <tbody id="studentList">
+
+        </tbody>
+      </table>
+
+
+    <div class="container">
+        <form id="studentAddForm" class="form-horizontal">
+          <div class="form-group">
+            <label for="inputEmail3" class="col-sm-2 control-label">First Name</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" name="first_name" placeholder="e.g. Eric">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="inputEmail3" class="col-sm-2 control-label">Last Name</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" name="last_name" placeholder="e.g. Schwartz">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="inputEmail3" class="col-sm-2 control-label">GPA</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" name="gpa" placeholder="e.g. 4.0">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="inputEmail3" class="col-sm-2 control-label">SAT</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" name="sat" placeholder="e.g. 1300">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="inputEmail3" class="col-sm-2 control-label">Start Date</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" name="start_date" placeholder="e.g. 2017-09-30">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="inputEmail3" class="col-sm-2 control-label">Major ID</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" name="major_id" placeholder="e.g. 2">
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+              <button id="submitStudentButton" type="submit" class="btn btn-default">Edit Student</button>
+            </div>
+          </div>
+        </form>
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script type="text/javascript" src='assets/javascript/edit.js'></script>
+  </body>
+</html>
